@@ -13,8 +13,8 @@ urlpatterns = patterns('octo_nemesis.views.stateset',
     # url(r'^admin/', include(admin.site.urls)),
     # url(r'^', include('octo_nemesis.urls')),
     
-    url(r'^stateset/$', 'stateset_list'),
-    url(r'^stateset/(?P<pk>[0-9]+)/$', 'stateset_detail')
+    url(r'^statesets/$', 'stateset_list'),
+    url(r'^statesets/(?P<pk>[0-9]+)/?$', 'stateset_detail')
 )
 
 # urlpatterns += patterns('octo_nemesis.views.state',

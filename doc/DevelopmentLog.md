@@ -12,8 +12,8 @@ Backlog (Implement Later)
 - models for
    - StateSet
    - State under a StateSet
+   - Board
    - BoardSession
-   - Button under a BoardSession
 - basic REST design
 
 - implement text client on game API
@@ -27,16 +27,28 @@ Backlog (Implement Later)
 Current To-Do (Implement Next)
 ==============================
 
+- refactor to use class-based view
+   - http://django-rest-framework.org/tutorial/3-class-based-views.html
 - get one unit test running
-- get one RESTful model running (StateSet)
-
-- refactor out JSONResponse?
 
 
 Committed (with commit numbers)
 ===============================
 
-commit TBD
+commit 
+-----------------------------------------------
+
+- refactor out JSONResponse
+   - http://django-rest-framework.org/tutorial/2-requests-and-responses.html
+- get one RESTful model running (StateSet)
+
+Test:
+- curl http://127.0.0.1:8000/statesets/2
+- curl http://127.0.0.1:8000/statesets/
+- curl -X POST http://127.0.0.1:8000/statesets/ -d title="The cat in the hat" -d description="a Dr Seuss thing" -d states_wrap="false"
+
+
+commit 3a315f333fdde166e6bb4122678fa5d7a77d20a6
 -----------------------------------------------
 
 - working view for stateset: SHOW, LIST

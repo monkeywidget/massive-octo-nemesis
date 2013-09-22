@@ -25,21 +25,20 @@ Board (in outgoing API response)
 Application Models
 ==================
 
-
 Board Session
 -------------
 
-- a 2D grid of Buttons
+- current state (Board)
+- winning state (Board)
 - associated with
    - a set of Rules
    - a State Set
 
-Button
+Board
 ------
 
-- (belongs to a Board Session)
-- coordinates (x,y)
-- current State
+- max coordinates (x,y)
+- current States in a single string (Varchar)
 
 State Set
 ---------
@@ -52,9 +51,9 @@ State
 -----
 
 - (belongs to a State Set)
+- name  (1 character)
 - state index (defines an order)
 - Color (rrggbb format, each field a 2-digit hexidecimal)
-
 
 
 Rules

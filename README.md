@@ -47,7 +47,7 @@ How To
 Run the server
 --------------
    
-   python manage.py runserver
+    python manage.py runserver
 
 Run the tests
 -------------
@@ -60,7 +60,11 @@ StateSets
 ---------
 
 List all:
-   curl http://127.0.0.1:8000/stateset/
+    curl http://127.0.0.1:8000/stateset/
 
 List one:
-   curl http://127.0.0.1:8000/stateset/2/
+    curl http://127.0.0.1:8000/stateset/2/
+    
+Create new:
+    curl -X POST http://127.0.0.1:8000/statesets/ -d title="The cat in the hat" -d description="a Dr Seuss thing" -d states_wrap="false"
+
