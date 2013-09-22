@@ -27,9 +27,10 @@ Backlog (Implement Later)
 Current To-Do (Implement Next)
 ==============================
 
-- refactor to use class-based view
+- refactor StateSet view to use class-based view
    - http://django-rest-framework.org/tutorial/3-class-based-views.html
 - get one unit test running
+   - http://greaterdebater.com/blog/gabe/post/12
 
 
 Committed (with commit numbers)
@@ -38,6 +39,7 @@ Committed (with commit numbers)
 commit 
 -----------------------------------------------
 
+- refactor to break out model (made "models" a package)
 - refactor out JSONResponse
    - http://django-rest-framework.org/tutorial/2-requests-and-responses.html
 - get one RESTful model running (StateSet)

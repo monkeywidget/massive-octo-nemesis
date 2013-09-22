@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from octo_nemesis.models import StateSet
+from octo_nemesis.models.stateset_model import StateSet
 from octo_nemesis.serializers import StateSetSerializer
 
 

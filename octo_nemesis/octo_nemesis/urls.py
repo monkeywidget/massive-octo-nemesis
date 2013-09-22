@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, include, url
 
-from octo_nemesis.views import stateset 
+from octo_nemesis.views import stateset_views 
 
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('octo_nemesis.views.stateset',
+urlpatterns = patterns('octo_nemesis.views.stateset_views',
     # Examples:
     # url(r'^$', 'octo_nemesis.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
