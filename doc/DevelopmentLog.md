@@ -18,6 +18,8 @@ Backlog (Implement Later)
 
 - implement text client on game API
 - implement dummy game API (non-REST)
+   - http://django-rest-framework.org/tutorial/2-requests-and-responses.html
+   - @api_view , APIView
 
 - complete rules model (AND/OR on ACTEE)
 
@@ -28,13 +30,23 @@ Current To-Do (Implement Next)
 - get one unit test running
 - get one RESTful model running (StateSet)
 
+- refactor out JSONResponse?
 
 
 Committed (with commit numbers)
 ===============================
 
-commit
-------------------
+commit TBD
+-----------------------------------------------
+
+- working view for stateset: SHOW, LIST
+- refactored views into separate files (views is a package now, not a module)
+Reading:
+- http://django-rest-framework.org/tutorial/2-requests-and-responses.html
+
+
+commit e00923ec54ac86bcd84f0325bf0229570bdb9691
+-----------------------------------------------
 
 - StateSet serializer
    - initially, only own data

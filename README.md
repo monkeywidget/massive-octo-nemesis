@@ -46,7 +46,8 @@ How To
 
 Run the server
 --------------
-
+   
+   python manage.py runserver
 
 Run the tests
 -------------
@@ -54,3 +55,12 @@ Run the tests
 
 Example basic queries
 =====================
+
+StateSets
+---------
+
+List all:
+   curl http://127.0.0.1:8000/stateset/
+
+List one:
+   curl http://127.0.0.1:8000/stateset/2/
