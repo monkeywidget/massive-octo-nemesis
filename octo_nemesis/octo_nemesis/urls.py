@@ -12,9 +12,9 @@ urlpatterns = patterns('octo_nemesis.views.stateset_views',
 
     # url(r'^admin/', include(admin.site.urls)),
     # url(r'^', include('octo_nemesis.urls')),
-    
-    url(r'^statesets/$', 'stateset_list'),
-    url(r'^statesets/(?P<pk>[0-9]+)/?$', 'stateset_detail')
+
+    url(r'^statesets/$', stateset_views.StateSetList.as_view()),
+    url(r'^statesets/(?P<pk>[0-9]+)/?$', stateset_views.StateSetDetail.as_view())
 )
 
 # urlpatterns += patterns('octo_nemesis.views.state',

@@ -8,7 +8,8 @@ Backlog (Implement Later)
 
 - test data loader
 
-- add State serialized representation to StateSet serializer
+- add State representation to StateSet view/serializer
+- add Board representation to BoardSession detail view/serializer
 - models for
    - StateSet
    - State under a StateSet
@@ -27,8 +28,6 @@ Backlog (Implement Later)
 Current To-Do (Implement Next)
 ==============================
 
-- refactor StateSet view to use class-based view
-   - http://django-rest-framework.org/tutorial/3-class-based-views.html
 - get one unit test running
    - http://greaterdebater.com/blog/gabe/post/12
 
@@ -39,7 +38,22 @@ Committed (with commit numbers)
 commit 
 -----------------------------------------------
 
+commit TBD 
+-----------------------------------------------
+
+- refactor StateSet view to use class-based view
+   - http://django-rest-framework.org/tutorial/3-class-based-views.html
+- re-enable json with a new mixin
+- new views.mixins package
+
+commit 79f5508d9acc80544cefb31d85271044fb579f1c
+-----------------------------------------------
+
 - refactor to break out model (made "models" a package)
+
+commit a020d83b60605aff5ccda0b7802f3fc76f1a8462
+-----------------------------------------------
+
 - refactor out JSONResponse
    - http://django-rest-framework.org/tutorial/2-requests-and-responses.html
 - get one RESTful model running (StateSet)

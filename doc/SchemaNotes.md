@@ -29,7 +29,9 @@ Board Session
 -------------
 
 - current state (Board)
+   - edited frequently
 - winning state (Board)
+   - rarely edited
 - associated with
    - a set of Rules
    - a State Set
