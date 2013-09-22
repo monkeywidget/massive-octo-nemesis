@@ -8,6 +8,7 @@ Backlog (Implement Later)
 
 - test data loader
 
+- add State serialized representation to StateSet serializer
 - models for
    - StateSet
    - State under a StateSet
@@ -25,15 +26,66 @@ Current To-Do (Implement Next)
 ==============================
 
 - get one unit test running
-- get one RESTful model running (BoardSession)
+- get one RESTful model running (StateSet)
+
 
 
 Committed (with commit numbers)
 ===============================
 
+commit
+------------------
 
-commit ??
----------
+- StateSet serializer
+   - initially, only own data
+   - not using REST yet (running through tutorial)
+- created StateSet model
+   - python manage.py syncdb
+- PostgreSQL
+   - pip install psycopg2
+   - set up DB:
+      - createuser octonemesis
+      - createdb -O octonemesis octonemesis
+      - ALTER USER octonemesis WITH PASSWORD 'start123';
+      - GRANT ALL PRIVILEGES ON DATABASE octonemesis TO octonemesis;
+
+Reading:
+- http://django-rest-framework.org/tutorial/1-serialization.html
+- http://django-rest-framework.org/#tutorial
+
+test:
+>>> from octo_nemesis.models import StateSet
+>>> from octo_nemesis.serializers import StateSetSerializer
+>>> from rest_framework.renderers import JSONRenderer
+>>> from rest_framework.parsers import JSONParser
+>>> stateset = StateSet(name="cool state set!", description="Twas brillig, and the slithy toves etc", states_wrap=False)
+>>> stateset.save()
+>>> stateset = StateSet(name="Beowulf Set", description="Hwast!!", states_wrap=True)
+>>> serializer = StateSetSerializer(stateset)
+>>> serializer.data
+{u'id': 4, 'name': u'Beowulf Set', 'description': u'Hwast!!', 'states_wrap': True}
+>>> content = JSONRenderer().render(serializer.data)
+>>> content
+'{"id": 4, "name": "Beowulf Set", "description": "Hwast!!", "states_wrap": true}'
+
+>>> import StringIO
+>>> stream = StringIO.StringIO(content)
+>>> data = JSONParser().parse(stream)
+>>> serializer = StateSetSerializer(data=data)
+>>> serializer.is_valid()
+True
+>>> serializer.object
+<StateSet: StateSet object>
+
+
+>>> serializer = StateSetSerializer(StateSet.objects.all(), many=True)
+>>> serializer.data
+[{u'id': 2, 'name': u'Beowulf Set', 'description': u'Hwast!!', 'states_wrap': True}, {u'id': 4, 'name': u'Beowulf Set', 'description': u'Hwast!!', 'states_wrap': True}, {u'id': 1, 'name': u'cool state set!', 'description': u'Twas brillig, and the slithy toves etc', 'states_wrap': False}, {u'id': 3, 'name': u'cool state set!', 'description': u'Twas brillig, and the slithy toves etc', 'states_wrap': False}]
+
+
+
+commit 694112293bd73f7fdf48a8f93868d7f0113976d0
+-----------------------------------------------
 - write business logic stories for models for rules
 - design basic (non-rule) models for runtime
 - write stories for hardware game
