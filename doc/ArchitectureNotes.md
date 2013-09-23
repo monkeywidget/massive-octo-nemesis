@@ -17,6 +17,11 @@ Text Client
 Web Client
 ----------
 
+REST browser:
+- rename / recolor REST browser theme:
+   - http://django-rest-framework.org/topics/browsable-api.html 
+
+
 Hardware/USB client
 -------------------
 

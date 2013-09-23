@@ -52,6 +52,7 @@ Run the server
 Run the tests
 -------------
 
+    python manage.py test octo_nemesis.tests
 
 Example basic queries
 =====================
@@ -68,3 +69,6 @@ List one:
 Create new:
     curl -X POST http://127.0.0.1:8000/statesets/ -d title="The cat in the hat" -d description="a Dr Seuss thing" -d states_wrap="false"
 
+browser: visit:
+	http://127.0.0.1:8000/statesets/?format=json
+	http://127.0.0.1:8000/statesets/

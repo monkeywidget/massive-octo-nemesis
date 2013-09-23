@@ -15,7 +15,6 @@ Backlog (Implement Later)
    - State under a StateSet
    - Board
    - BoardSession
-- basic REST design
 
 - implement text client on game API
 - implement dummy game API (non-REST)
@@ -24,23 +23,29 @@ Backlog (Implement Later)
 
 - complete rules model (AND/OR on ACTEE)
 
+- basic view / REST for State
 
 Current To-Do (Implement Next)
 ==============================
+
+- model for State (each belongs to StateSet)
+- tests for State
+- tests for StateSet
+
+Committed (with commit numbers)
+===============================
+
+commit TBD
+-----------------------------------------------
 
 - get one unit test running
    - http://greaterdebater.com/blog/gabe/post/12
 
 
-Committed (with commit numbers)
-===============================
-
-commit 
+commit c8b49bc97a5a0d942f7e65900316e0725b56eecf 
 -----------------------------------------------
 
-commit TBD 
------------------------------------------------
-
+- basic REST design
 - refactor StateSet view to use class-based view
    - http://django-rest-framework.org/tutorial/3-class-based-views.html
 - re-enable json with a new mixin
