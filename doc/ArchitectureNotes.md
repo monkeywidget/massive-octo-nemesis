@@ -25,11 +25,7 @@ REST browser:
 Hardware/USB client
 -------------------
 
-Proposed:
-- USB button pad is a monome-compatible
-- USB driver etc is backed by Arduino
-- Arduino connects to a Raspberry Pi, which is running the DB and app server
-
+See HardwareNotes.md
 
 REST API
 =========

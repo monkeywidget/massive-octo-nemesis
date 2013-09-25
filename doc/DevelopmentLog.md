@@ -30,17 +30,26 @@ Current To-Do (Implement Next)
 
 - model for State (each belongs to StateSet)
 - tests for State
-- tests for StateSet
+
+- tests for StateSet (model)
+   - https://factoryboy.readthedocs.org/en/latest/
+- tests for StateSet (view)
+   - TestClient: https://docs.djangoproject.com/en/dev/topics/testing/overview/
 
 Committed (with commit numbers)
 ===============================
 
-commit TBD
+commit 
+-----------------------------------------------
+
+- hardware notes
+
+commit 94145d3bde2d28ad5475767b2ea0fe832e9372cf
 -----------------------------------------------
 
 - get one unit test running
    - http://greaterdebater.com/blog/gabe/post/12
-
+   - http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/
 
 commit c8b49bc97a5a0d942f7e65900316e0725b56eecf 
 -----------------------------------------------
